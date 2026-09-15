@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir -p docs
           lftp -u "$SFTP_USER,$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT \
-            -e "set sftp:auto-confirm yes; mirror --verbose /BlueMap/web ./docs; bye"
+            -e "set sftp:auto-confirm yes; mirror --verbose /bluemap/web ./docs; bye"
 
       - name: Commit and push if changed
         run: |
